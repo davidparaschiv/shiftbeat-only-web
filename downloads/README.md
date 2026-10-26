@@ -1,3 +1,11 @@
 # Release downloads
 
-Publish the SHIFT Beat installer using GitHub Releases. The final release repository, asset filename and download URL are pending. Update the download section in index.html when the actual asset is available. Do not use the old Soundblast installer.
+Create a release: https://github.com/davidparaschiv/shiftbeat-only-web/releases/new
+
+Upload the installer with the exact asset filename **SHIFT-Beat.dmg**, then publish the release as Latest. Keep the filename identical for subsequent releases. Drafts and prereleases are not used by the latest stable release link.
+
+The website download button uses:
+
+https://github.com/davidparaschiv/shiftbeat-only-web/releases/latest/download/SHIFT-Beat.dmg
+
+The link starts working once a latest published release contains this asset. No website edit is needed when newer releases use the same filename.

@@ -12,7 +12,7 @@ Pricing remains EUR 25/month. `app.js` retains the original Supabase backend, pu
 
 ## Release download
 
-The final GitHub release URL has not been supplied. The download section explicitly says the link is coming soon. Once ready, replace `.release-pending` in `index.html` with a link to the published asset. Do not point visitors to the previous app's installer. See downloads/README.md.
+The download button uses `https://github.com/davidparaschiv/shiftbeat-only-web/releases/latest/download/SHIFT-Beat.dmg`. Upload the installer as **SHIFT-Beat.dmg** on every release and publish it as the latest stable release. Create a release at https://github.com/davidparaschiv/shiftbeat-only-web/releases/new. See downloads/README.md.
 
 ## SEO
 
