@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="SHIFT Beat — offline DJ transition analysis for Mac. Find entry and exit points, compare Build and Release matches, and export cues from your local music library." />
+    <meta name="description" content="SHIFT Beat — offline DJ transition analysis for Mac. Find entry and exit points, compare Build and Release matches, and export playlist metadata to Serato and rekordbox." />
     <meta name="theme-color" content="#060b0f" />
     <title>SHIFT Beat — Offline DJ Transition Analysis for Mac</title>
     <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
@@ -13,7 +13,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SHIFT Beat" />
     <meta property="og:title" content="SHIFT Beat — Find your next transition" />
-    <meta property="og:description" content="Offline DJ transition analysis for Mac. Discover entry and exit points, explore Build and Release matches, and export cues." />
+    <meta property="og:description" content="Offline DJ transition analysis for Mac. Discover entry and exit points, explore Build and Release matches, and export playlist metadata to Serato and rekordbox." />
     <meta property="og:url" content="https://shift-beat.com/" />
     <meta property="og:image" content="https://shift-beat.com/assets/social-card.png" />
     <meta property="og:image:alt" content="SHIFT Beat — offline transition analysis for Mac" />
@@ -21,16 +21,21 @@
     <meta name="twitter:title" content="SHIFT Beat — Find your next transition" />
     <meta name="twitter:description" content="Analyze your local library. Find the cut. Feel the shift." />
     <meta name="twitter:image" content="https://shift-beat.com/assets/social-card.png" />
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SHIFT Beat", "url": "https://shift-beat.com/", "operatingSystem": "macOS 15 or newer", "applicationCategory": "MultimediaApplication", "description": "Offline music analysis for DJ entry and exit points, Build and Release transition matches, and cue exports.", "offers": {"@type": "Offer", "price": "25", "priceCurrency": "EUR", "description": "Monthly subscription. Cancel anytime."}, "featureList": ["Analyze MP3, AIFF and WAV files from your local library", "Find entry and exit points with beat and downbeat detection", "Explore up to 25 Build and 25 Release matches per track", "Compare compatible tracks within \u00b18 BPM", "Reopen saved analysis without rescanning your music", "Export CSV, JSON and rekordbox XML cues"]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SHIFT Beat", "url": "https://shift-beat.com/", "operatingSystem": "macOS 15 or newer", "applicationCategory": "MultimediaApplication", "description": "Offline music analysis for DJ entry and exit points, Build and Release transition matches, and cue exports.", "offers": {"@type": "Offer", "price": "25", "priceCurrency": "EUR", "description": "Monthly subscription. Cancel anytime."}, "featureList": ["Playlist metadata export to Serato and rekordbox", "Analyze MP3, AIFF and WAV files from your local library", "Find entry and exit points with beat and downbeat detection", "Explore up to 25 Build and 25 Release matches per track", "Compare compatible tracks within \u00b18 BPM", "Reopen saved analysis without rescanning your music", "Export CSV, JSON and rekordbox XML cues"]}</script>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#top">Skip to content</a>
-    <aside class="partner-bar" aria-label="App compatibility">
-      <div class="partner-bar-inner"><span class="partner-bar-mark" aria-hidden="true"></span>
-        <p><span>Your music. Analyzed locally.</span><strong>macOS 15+ · Intel &amp; Apple Silicon</strong></p>
-      </div>
+    <aside class="partner-bar" aria-label="Playlist metadata export announcement">
+      <a class="partner-bar-inner" href="#playlist-export">
+        <span class="export-notice-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15V3m0 0L7 8m5-5 5 5M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5" /></svg></span>
+        <span class="export-notice-copy">
+          <span class="export-notice-title">Playlist metadata export</span>
+          <span class="export-notice-destinations"><span class="export-notice-label">Ready for</span><strong>Serato</strong><span class="export-notice-plus" aria-hidden="true">+</span><strong>rekordbox</strong></span>
+        </span>
+        <span class="export-notice-arrow" aria-hidden="true">↗</span>
+      </a>
     </aside>
 
     <header>
@@ -77,7 +82,8 @@
           <li>Explore up to 25 Build and 25 Release matches per track</li>
           <li>Compare compatible tracks within ±8 BPM</li>
           <li>Reopen saved analysis without rescanning your music</li>
-          <li>Export CSV, JSON and rekordbox XML cues</li>
+          <li>Export playlist metadata to Serato and rekordbox</li>
+          <li>Export transition data as CSV and JSON</li>
         </ul>
       </section>
 
@@ -119,8 +125,8 @@
           <article class="reveal">
             <span class="number">04</span>
             <div class="feature-icon midi-icon" aria-hidden="true"><i></i><i></i><i></i></div>
-            <h3>Save &amp; export</h3>
-            <p>Keep analyzed libraries, add new tracks on a rerun, and export your transition data and rekordbox memory cues.</p>
+            <h3 id="playlist-export">Save &amp; export</h3>
+            <p>Keep analyzed libraries, add new tracks on a rerun, and export playlist metadata to Serato and rekordbox. Export transition data as CSV and JSON, too.</p>
           </article>
         </div>
       </section>
