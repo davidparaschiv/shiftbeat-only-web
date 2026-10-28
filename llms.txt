@@ -7,4 +7,4 @@
 
 Analyzes local MP3, AIFF and WAV tracks for entry and exit points. Ranks up to 25 Build and 25 Release matches per track within ±8 BPM. Supports playlist metadata export to Serato and rekordbox, saved libraries, handoff previews and CSV, JSON and rekordbox XML exports. Results are suggestions based on audio analysis.
 
-Subscription: EUR 25 per month. Support: support@shift-beat.com.
+Subscription: EUR 50 per month. Support: support@shift-beat.com.
