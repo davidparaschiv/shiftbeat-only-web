@@ -8,7 +8,7 @@ Run `python3 -m http.server 8080` and open http://localhost:8080.
 
 ## Payments
 
-Pricing is EUR 50/month. `app.js` retains the original Supabase backend, publishable key, `create-checkout` endpoint, email request body and payment-return handling. The website uses the same backend and endpoints as requested. The actual checkout price is selected server-side by `STRIPE_PRICE_ID`; updating website copy does not update Stripe. The backend must use a EUR 50/month recurring Stripe Price before deploying this pricing change.
+Pricing is EUR 25/month. `app.js` retains the original Supabase backend, publishable key, `create-checkout` endpoint, email request body and payment-return handling. The website uses the same backend and endpoints as requested. The actual checkout price is selected server-side by `STRIPE_PRICE_ID`; updating website copy does not update Stripe. The backend must use a EUR 25/month recurring Stripe Price before deploying this pricing change.
 
 ## Release download
 
