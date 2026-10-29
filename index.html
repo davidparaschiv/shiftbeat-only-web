@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="SHIFT Beat — offline DJ transition analysis for Mac. Find entry and exit points, compare Build and Release matches, and export playlist metadata to Serato and rekordbox." />
+    <meta name="description" content="SHIFT Beat — offline DJ transition analysis for Mac. Find entry and exit points, compare Build, Release Tension and Maintain matches, and export playlist metadata to Serato and rekordbox." />
     <meta name="theme-color" content="#060b0f" />
     <title>SHIFT Beat — Offline DJ Transition Analysis for Mac</title>
     <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
@@ -13,7 +13,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SHIFT Beat" />
     <meta property="og:title" content="SHIFT Beat — Find your next transition" />
-    <meta property="og:description" content="Offline DJ transition analysis for Mac. Discover entry and exit points, explore Build and Release matches, and export playlist metadata to Serato and rekordbox." />
+    <meta property="og:description" content="Offline DJ transition analysis for Mac. Discover entry and exit points, explore Build, Release Tension and Maintain matches, and export playlist metadata to Serato and rekordbox." />
     <meta property="og:url" content="https://shift-beat.com/" />
     <meta property="og:image" content="https://shift-beat.com/assets/social-card.png" />
     <meta property="og:image:alt" content="SHIFT Beat — offline transition analysis for Mac" />
@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="SHIFT Beat — Find your next transition" />
     <meta name="twitter:description" content="Analyze your local library. Find the cut. Feel the shift." />
     <meta name="twitter:image" content="https://shift-beat.com/assets/social-card.png" />
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SHIFT Beat", "url": "https://shift-beat.com/", "operatingSystem": "macOS 15 or newer", "applicationCategory": "MultimediaApplication", "description": "Offline music analysis for DJ entry and exit points, Build and Release transition matches, and cue exports.", "offers": {"@type": "Offer", "price": "50", "priceCurrency": "EUR", "description": "Monthly subscription. Cancel anytime."}, "featureList": ["Playlist metadata export to Serato and rekordbox", "Analyze MP3, AIFF and WAV files from your local library", "Find entry and exit points with beat and downbeat detection", "Explore up to 25 Build and 25 Release matches per track", "Compare compatible tracks within \u00b18 BPM", "Reopen saved analysis without rescanning your music", "Export CSV, JSON and rekordbox XML cues"]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SHIFT Beat", "url": "https://shift-beat.com/", "operatingSystem": "macOS 15 or newer", "applicationCategory": "MultimediaApplication", "description": "Offline DJ transition analysis with Build (Drop Beat), Release Tension and Maintain matches, playlist building, and separate playlist-order and hot-cue exports.", "offers": {"@type": "Offer", "price": "50", "priceCurrency": "EUR", "description": "Monthly subscription. Cancel anytime."}, "featureList": ["Build (Drop Beat), Release Tension and Maintain transition modes", "Up to 25 independently ranked matches per mode within \u00b18 BPM", "Playlist building from user-selected saved matches", "Separate playlist-order and hot-cue exports for rekordbox, Serato DJ 4+ and Soundblast DJ", "Local MP3, AIFF and WAV analysis", "CSV and JSON transition reports"]}</script>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
@@ -53,8 +53,13 @@
       <section class="hero">
         <div class="hero-copy">
           <p class="kicker"><span></span> Offline transition analysis</p>
-          <h1>Find the cut.<br /><em>Feel the shift.</em></h1>
-          <p class="lead">Find where to leave one track and enter the next. Analyze your local library, explore ranked transitions, and hear the handoff before your set.</p>
+          <h1 class="hero-statement">
+            <span class="hero-statement-main">Smartest mathematical equations</span>
+            <span class="hero-statement-context">for detecting transitions hot cues in your</span>
+            <em>OFFLINE Library</em>
+            <span class="hero-statement-ending">on the planet.</span>
+          </h1>
+          <p class="lead">Find where to leave one track and enter the next. Shape the energy with Build, Release Tension or Maintain, then build a playlist from your saved matches.</p>
           <a class="button" href="#download">Download SHIFT Beat <span>↓</span></a>
           <p class="platforms">macOS 15+ · Intel &amp; Apple Silicon</p>
         </div>
@@ -64,9 +69,9 @@
             <div class="preview-header"><span class="preview-dots" aria-hidden="true">● ● ●</span><span>SHIFT BEAT / THE HANDOFF</span><span class="preview-status">LOCAL</span></div>
             <div class="preview-title"><span>Find your next transition</span><small>Illustrative analysis</small></div>
             <div class="preview-wave"><div class="wave-caption"><span>A · EXIT POINT</span><b>02:16.0</b></div><svg viewBox="0 0 500 90" aria-hidden="true" class="waveform"><path d="M8 39v12m9-23v34m9-44v54m9-38v22m9-47v72m9-52v32m9-20v8m9-33v58m9-67v76m9-49v22m9-39v56m9-39v22m9-51v80m9-50v20m9-35v50m9-61v72m9-52v32m9-46v60m9-40v20m9-31v42m9-53v64m9-44v24m9-34v44m9-29v14m9-19v24m9-29v34m9-25v16m9-20v24m9-29v34m9-24v14m9-21v28m9-19v10m9-16v22m9-15v8m9-17v26m9-18v10m9-14v18m9-12v6m9-9v12m9-11v10m9-8v6m9-10v14m9-12v10m9-9v8m9-8v6m9-6v4m9-5v6m9-5v4m9-4v4m9-4v4m9-4v4m9-4v4m9-4v4"/><path class="cue-line" d="M290 0v90"/></svg><small>10 seconds before exit</small></div>
-            <div class="handoff-link"><span></span><b>↓ &nbsp; BUILD TRANSITION</b><span></span></div>
+            <div class="handoff-link"><span></span><b>↓ &nbsp; BUILD / DROP BEAT</b><span></span></div>
             <div class="preview-wave entry"><div class="wave-caption"><span>B · ENTRY POINT</span><b>00:48.0</b></div><svg viewBox="0 0 500 90" aria-hidden="true" class="waveform"><path d="M8 41v8m9-10v12m9-12v12m9-14v16m9-18v20m9-14v8m9-10v12m9-13v14m9-11v8m9-14v20m9-26v32m9-26v20m9-33v46m9-37v28m9-44v60m9-53v46m9-35v24m9-47v70m9-59v48m9-56v64m9-50v36m9-46v56m9-66v76m9-56v36m9-42v48m9-50v52m9-57v62m9-49v36m9-57v78m9-61v44m9-53v62m9-47v32m9-43v54m9-42v30m9-51v72m9-47v22m9-32v42m9-50v58m9-42v26m9-44v62m9-51v40m9-35v30m9-49v68m9-50v32m9-42v52m9-39v26m9-33v40m9-35v30m9-41v52m9-40v28m9-38v48m9-37v26m9-34v42m9-30v18"/><path class="cue-line" d="M116 0v90"/></svg><small>5 seconds after entry</small></div>
-            <div class="preview-bottom"><span><i></i> Build &amp; Release matches</span><span>±8 BPM</span></div>
+            <div class="preview-bottom"><span><i></i> Three transition modes</span><span>±8 BPM</span></div>
           </div>
         </div>
       </section>
@@ -79,11 +84,11 @@
         <ul class="key-points-list">
           <li>Analyze MP3, AIFF and WAV files from your local library</li>
           <li>Find entry and exit points with beat and downbeat detection</li>
-          <li>Explore up to 25 Build and 25 Release matches per track</li>
+          <li>Explore up to 25 ranked matches per track in each of three modes</li>
           <li>Compare compatible tracks within ±8 BPM</li>
           <li>Reopen saved analysis without rescanning your music</li>
-          <li>Export playlist metadata to Serato and rekordbox</li>
-          <li>Export transition data as CSV and JSON</li>
+          <li>Build playlists from saved transition matches</li>
+          <li>Export playlist order and hot cues separately</li>
         </ul>
       </section>
 
@@ -94,10 +99,30 @@
           <p>
             Choose a music folder and let SHIFT Beat locate promising transition points.
             Search your analyzed tracks by title, artist or filename, then explore separate
-            Build and Release rankings. Preview the selected handoff with pitch-preserving
+            Build, Release Tension and Maintain rankings. Preview the selected handoff with pitch-preserving
             tempo adjustment and export the cues for your preparation workflow.
           </p>
         </div>
+      </section>
+
+      <section class="transition-modes" aria-labelledby="transition-modes-title">
+        <p class="section-label">Choose the next feeling</p>
+        <h2 id="transition-modes-title">Build it. Release it.<br />Keep it moving.</h2>
+        <div class="mode-grid">
+          <article><span class="mode-symbol" aria-hidden="true">↗</span><p class="mode-label">BUILD / DROP BEAT</p><h3>Lift the energy.</h3><p>Find build-up and drop boundaries to move into a stronger moment. Build appears as <strong>DROP BEAT</strong> in the app.</p></article>
+          <article><span class="mode-symbol" aria-hidden="true">↘</span><p class="mode-label">RELEASE TENSION</p><h3>Give the set room.</h3><p>Move toward a breakdown or a lower-energy section, using detected decreases in energy and bass.</p></article>
+          <article><span class="mode-symbol" aria-hidden="true">→</span><p class="mode-label">MAINTAIN</p><h3>Hold the groove.</h3><p>Favor steady energy, bass and rhythmic activity for a handoff that keeps the current momentum.</p></article>
+        </div>
+        <p class="mode-note">Up to 25 independently ranked matches per mode, within ±8 BPM. Transition points are suggestions to explore and preview.</p>
+      </section>
+
+      <section class="playlist-section" aria-labelledby="playlist-title">
+        <div><p class="section-label">Playlist generation</p><h2 id="playlist-title">Your next track.<br />Your whole set.</h2><p>Turn saved transition matches into a playlist, one choice at a time. You choose the journey; SHIFT Beat supplies the next possibilities.</p></div>
+        <ol class="playlist-steps">
+          <li><span>01</span><div><h3>Start with a track</h3><p>Choose the first song from your analyzed library.</p></div></li>
+          <li><span>02</span><div><h3>Shape each handoff</h3><p>Choose Build, Release Tension or Maintain, then pick your next saved match. Repeat to grow your sequence.</p></div></li>
+          <li><span>03</span><div><h3>Take the sequence with you</h3><p>Export Playlist Order or Hot Cues for your selected DJ app. Playlist files reference your existing music; they do not copy audio.</p></div></li>
+        </ol>
       </section>
 
       <section class="features" aria-labelledby="features-title">
@@ -113,8 +138,8 @@
           <article class="reveal">
             <span class="number">02</span>
             <div class="feature-icon pads-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-            <h3>Build &amp; Release</h3>
-            <p>Raise the energy or bring it down. Explore two independently ranked lists with compatible tempo and local musical features.</p>
+            <h3>Three energy modes</h3>
+            <p>Build into a drop, release tension into a lower-energy section, or maintain a steady groove. Each mode has its own ranked matches.</p>
           </article>
           <article class="reveal">
             <span class="number">03</span>
@@ -126,7 +151,7 @@
             <span class="number">04</span>
             <div class="feature-icon midi-icon" aria-hidden="true"><i></i><i></i><i></i></div>
             <h3 id="playlist-export">Save &amp; export</h3>
-            <p>Keep analyzed libraries, add new tracks on a rerun, and export playlist metadata to Serato and rekordbox. Export transition data as CSV and JSON, too.</p>
+            <p>Build a playlist from saved matches. Export its selected order or hot cues for rekordbox, Serato DJ 4+ and Soundblast DJ. CSV and JSON transition reports are also available.</p>
           </article>
         </div>
       </section>
