@@ -78,6 +78,11 @@ h1 em { color:var(--cyan); font-style:normal; }
 .purchase-row button:disabled { cursor:wait; opacity:.65; }
 .purchase-status { min-height:19px; margin:12px 0 0; color:var(--muted); font-size:12px; line-height:1.55; }
 .purchase-status:empty { display:none; }
+.subscription-management { display:flex; flex-wrap:wrap; align-items:center; gap:6px 12px; max-width:680px; margin:0 0 24px; font-size:11px; line-height:1.6; }
+.subscription-management a { display:inline-flex; flex:0 0 auto; align-items:center; justify-content:center; gap:7px; min-height:36px; padding:6px 11px; border:1px solid color-mix(in srgb,var(--cyan) 24%,transparent); border-radius:7px; background:color-mix(in srgb,var(--cyan) 5%,var(--panel)); color:var(--cyan); font-size:11px; font-weight:600; transition:border-color .2s ease,background .2s ease; }
+.subscription-management a:hover { border-color:var(--cyan); background:color-mix(in srgb,var(--cyan) 10%,var(--panel)); }
+.subscription-management a:focus-visible { outline:2px solid var(--cyan); outline-offset:4px; }
+.subscription-management>span { color:var(--muted); }
 .purchase-status[data-type="success"] { color:var(--green); }
 .purchase-status[data-type="error"] { color:#ff7868; }
 .download-list { max-width:680px; display:grid; gap:8px; }
