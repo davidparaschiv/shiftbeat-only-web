@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SHIFT Beat — offline DJ transition analysis for Mac. Find entry and exit points, compare Build and Release matches, and export playlist metadata to Serato and rekordbox." />
+    <meta name="theme-color" content="#060b0f" />
+    <title>SHIFT Beat — Offline DJ Transition Analysis for Mac</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
+    <link rel="apple-touch-icon" href="assets/shiftbeat-icon.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://shift-beat.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SHIFT Beat" />
+    <meta property="og:title" content="SHIFT Beat — Find your next transition" />
+    <meta property="og:description" content="Offline DJ transition analysis for Mac. Discover entry and exit points, explore Build and Release matches, and export playlist metadata to Serato and rekordbox." />
+    <meta property="og:url" content="https://shift-beat.com/" />
+    <meta property="og:image" content="https://shift-beat.com/assets/social-card.png" />
+    <meta property="og:image:alt" content="SHIFT Beat — offline transition analysis for Mac" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SHIFT Beat — Find your next transition" />
+    <meta name="twitter:description" content="Analyze your local library. Find the cut. Feel the shift." />
+    <meta name="twitter:image" content="https://shift-beat.com/assets/social-card.png" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SHIFT Beat", "url": "https://shift-beat.com/", "operatingSystem": "macOS 15 or newer", "applicationCategory": "MultimediaApplication", "description": "Offline music analysis for DJ entry and exit points, Build and Release transition matches, and cue exports.", "offers": {"@type": "Offer", "price": "25", "priceCurrency": "EUR", "description": "Monthly subscription. Cancel anytime."}, "featureList": ["Playlist metadata export to Serato and rekordbox", "Analyze MP3, AIFF and WAV files from your local library", "Find entry and exit points with beat and downbeat detection", "Explore up to 25 Build and 25 Release matches per track", "Compare compatible tracks within \u00b18 BPM", "Reopen saved analysis without rescanning your music", "Export CSV, JSON and rekordbox XML cues"]}</script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Skip to content</a>
+    <aside class="partner-bar" aria-label="Playlist metadata export announcement">
+      <a class="partner-bar-inner" href="#playlist-export">
+        <span class="export-notice-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15V3m0 0L7 8m5-5 5 5M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5" /></svg></span>
+        <span class="export-notice-copy">
+          <span class="export-notice-title">Playlist metadata export</span>
+          <span class="export-notice-destinations"><span class="export-notice-label">Ready for</span><strong>Serato</strong><span class="export-notice-plus" aria-hidden="true">+</span><strong>rekordbox</strong></span>
+        </span>
+        <span class="export-notice-arrow" aria-hidden="true">↗</span>
+      </a>
+    </aside>
+
+    <header>
+      <a class="logo" href="#top" aria-label="SHIFT Beat home">
+        <img src="assets/shiftbeat-icon.png" alt="" />
+        <span>SHIFT <b>Beat</b></span>
+      </a>
+      <nav class="header-actions" aria-label="Primary navigation">
+        <a class="header-download" href="terms.html">Terms</a>
+        <a class="header-download" href="#download">Download</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="kicker"><span></span> Offline transition analysis</p>
+          <h1>Find the cut.<br /><em>Feel the shift.</em></h1>
+          <p class="lead">Find where to leave one track and enter the next. Analyze your local library, explore ranked transitions, and hear the handoff before your set.</p>
+          <a class="button" href="#download">Download SHIFT Beat <span>↓</span></a>
+          <p class="platforms">macOS 15+ · Intel &amp; Apple Silicon</p>
+        </div>
+
+        <div class="hero-visual" aria-label="Illustrative SHIFT Beat transition analysis">
+          <div class="analysis-preview">
+            <div class="preview-header"><span class="preview-dots" aria-hidden="true">● ● ●</span><span>SHIFT BEAT / THE HANDOFF</span><span class="preview-status">LOCAL</span></div>
+            <div class="preview-title"><span>Find your next transition</span><small>Illustrative analysis</small></div>
+            <div class="preview-wave"><div class="wave-caption"><span>A · EXIT POINT</span><b>02:16.0</b></div><svg viewBox="0 0 500 90" aria-hidden="true" class="waveform"><path d="M8 39v12m9-23v34m9-44v54m9-38v22m9-47v72m9-52v32m9-20v8m9-33v58m9-67v76m9-49v22m9-39v56m9-39v22m9-51v80m9-50v20m9-35v50m9-61v72m9-52v32m9-46v60m9-40v20m9-31v42m9-53v64m9-44v24m9-34v44m9-29v14m9-19v24m9-29v34m9-25v16m9-20v24m9-29v34m9-24v14m9-21v28m9-19v10m9-16v22m9-15v8m9-17v26m9-18v10m9-14v18m9-12v6m9-9v12m9-11v10m9-8v6m9-10v14m9-12v10m9-9v8m9-8v6m9-6v4m9-5v6m9-5v4m9-4v4m9-4v4m9-4v4m9-4v4m9-4v4"/><path class="cue-line" d="M290 0v90"/></svg><small>10 seconds before exit</small></div>
+            <div class="handoff-link"><span></span><b>↓ &nbsp; BUILD TRANSITION</b><span></span></div>
+            <div class="preview-wave entry"><div class="wave-caption"><span>B · ENTRY POINT</span><b>00:48.0</b></div><svg viewBox="0 0 500 90" aria-hidden="true" class="waveform"><path d="M8 41v8m9-10v12m9-12v12m9-14v16m9-18v20m9-14v8m9-10v12m9-13v14m9-11v8m9-14v20m9-26v32m9-26v20m9-33v46m9-37v28m9-44v60m9-53v46m9-35v24m9-47v70m9-59v48m9-56v64m9-50v36m9-46v56m9-66v76m9-56v36m9-42v48m9-50v52m9-57v62m9-49v36m9-57v78m9-61v44m9-53v62m9-47v32m9-43v54m9-42v30m9-51v72m9-47v22m9-32v42m9-50v58m9-42v26m9-44v62m9-51v40m9-35v30m9-49v68m9-50v32m9-42v52m9-39v26m9-33v40m9-35v30m9-41v52m9-40v28m9-38v48m9-37v26m9-34v42m9-30v18"/><path class="cue-line" d="M116 0v90"/></svg><small>5 seconds after entry</small></div>
+            <div class="preview-bottom"><span><i></i> Build &amp; Release matches</span><span>±8 BPM</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="key-points reveal" aria-labelledby="key-points-title">
+        <div class="key-points-heading">
+          <p class="section-label">Key Points</p>
+          <h2 id="key-points-title">Analyze once.<br />Explore more.</h2>
+        </div>
+        <ul class="key-points-list">
+          <li>Analyze MP3, AIFF and WAV files from your local library</li>
+          <li>Find entry and exit points with beat and downbeat detection</li>
+          <li>Explore up to 25 Build and 25 Release matches per track</li>
+          <li>Compare compatible tracks within ±8 BPM</li>
+          <li>Reopen saved analysis without rescanning your music</li>
+          <li>Export playlist metadata to Serato and rekordbox</li>
+          <li>Export transition data as CSV and JSON</li>
+        </ul>
+      </section>
+
+      <section class="description reveal" aria-labelledby="description-title">
+        <p class="section-label">SHIFT Beat</p>
+        <div>
+          <h2 id="description-title">Your library.<br />A clearer next move.</h2>
+          <p>
+            Choose a music folder and let SHIFT Beat locate promising transition points.
+            Search your analyzed tracks by title, artist or filename, then explore separate
+            Build and Release rankings. Preview the selected handoff with pitch-preserving
+            tempo adjustment and export the cues for your preparation workflow.
+          </p>
+        </div>
+      </section>
+
+      <section class="features" aria-labelledby="features-title">
+        <p class="section-label">Features</p>
+        <h2 id="features-title" class="sr-only">SHIFT Beat features</h2>
+        <div class="feature-grid">
+          <article class="reveal">
+            <span class="number">01</span>
+            <div class="feature-icon waveform-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <h3>Entry &amp; exit points</h3>
+            <p>Discover potential handoffs using beat timing, energy changes and the sound around each transition point.</p>
+          </article>
+          <article class="reveal">
+            <span class="number">02</span>
+            <div class="feature-icon pads-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <h3>Build &amp; Release</h3>
+            <p>Raise the energy or bring it down. Explore two independently ranked lists with compatible tempo and local musical features.</p>
+          </article>
+          <article class="reveal">
+            <span class="number">03</span>
+            <div class="feature-icon fx-icon" aria-hidden="true">A→B</div>
+            <h3>Hear the handoff</h3>
+            <p>Listen to the 10 seconds before an exit and 5 seconds after an entry, with tempo adjustment that preserves pitch.</p>
+          </article>
+          <article class="reveal">
+            <span class="number">04</span>
+            <div class="feature-icon midi-icon" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h3 id="playlist-export">Save &amp; export</h3>
+            <p>Keep analyzed libraries, add new tracks on a rerun, and export playlist metadata to Serato and rekordbox. Export transition data as CSV and JSON, too.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="download" id="download" aria-labelledby="download-title">
+        <p class="section-label">Download</p>
+        <h2 id="download-title">Get SHIFT Beat.</h2>
+        <p class="download-note">€25 per month · Cancel anytime · License delivered by email.</p>
+
+        <form class="purchase-form" id="purchase-form" novalidate>
+          <label for="purchase-email">Email address</label>
+          <div class="purchase-row">
+            <input id="purchase-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required />
+            <button id="purchase-button" type="submit">Subscribe · €25/month <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="purchase-status" id="purchase-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="subscription-management"><a href="https://billing.stripe.com/p/login/cNi9AM5Rm95q5wxa2d28800">Manage subscription <span aria-hidden="true">↗</span></a><span>Update payment details or cancel using your payment email.</span></p>
+
+        <div class="download-list">
+          <a class="release-download" href="https://github.com/davidparaschiv/shiftbeat-only-web/releases/latest/download/SHIFT.Beat.dmg">
+            <svg class="os-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.7 12.8c0-2.7 2.2-4 2.3-4.1-1.3-1.9-3.3-2.1-4-2.1-1.7-.2-3.3 1-4.2 1-.9 0-2.2-1-3.7-1-1.9 0-3.7 1.1-4.7 2.8-2 3.5-.5 8.7 1.4 11.5 1 1.4 2.1 2.9 3.6 2.8 1.4-.1 2-1 3.7-1s2.2 1 3.7 1c1.5 0 2.5-1.4 3.5-2.8 1.1-1.6 1.5-3.2 1.6-3.3-.1 0-3.2-1.2-3.2-4.8ZM13.9 4.8c.8-1 1.4-2.4 1.2-3.8-1.2.1-2.7.8-3.6 1.8-.8.9-1.4 2.3-1.2 3.6 1.4.1 2.8-.7 3.6-1.6Z" /></svg>
+            <span><strong>Download SHIFT Beat for Mac</strong><small>macOS 15+ · Intel &amp; Apple Silicon</small><small>Latest release · DMG installer</small></span>
+            <b class="arrow" aria-hidden="true">↓</b>
+          </a>
+        </div>
+      </section>
+    </main>
+
+
+    <footer>
+      <a class="logo" href="#top"><img src="assets/shiftbeat-icon.png" alt="" /><span>SHIFT <b>Beat</b></span></a>
+      <a class="footer-support" href="mailto:support@shift-beat.com">support@shift-beat.com</a>
+      <p>© <span id="year"></span> SHIFT Beat</p>
+    </footer>
+  </body>
+</html>
