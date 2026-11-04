@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="SHIFT Beat — Find your next transition" />
     <meta name="twitter:description" content="Analyze your local library. Find the cut. Feel the shift." />
     <meta name="twitter:image" content="https://shift-beat.com/assets/social-card.png" />
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SHIFT Beat", "url": "https://shift-beat.com/", "operatingSystem": "macOS 15 or newer", "applicationCategory": "MultimediaApplication", "description": "Offline music analysis for DJ entry and exit points, Build and Release transition matches, and cue exports.", "offers": {"@type": "Offer", "price": "25", "priceCurrency": "EUR", "description": "Monthly subscription. Cancel anytime."}, "featureList": ["Playlist metadata export to Serato and rekordbox", "Analyze MP3, AIFF and WAV files from your local library", "Find entry and exit points with beat and downbeat detection", "Explore up to 25 Build and 25 Release matches per track", "Compare compatible tracks within \u00b18 BPM", "Reopen saved analysis without rescanning your music", "Export CSV, JSON and rekordbox XML cues"]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SHIFT Beat", "url": "https://shift-beat.com/", "operatingSystem": "macOS 15 or newer", "applicationCategory": "MultimediaApplication", "description": "Offline music analysis for DJ entry and exit points, Build and Release transition matches, and cue exports.", "offers": {"@type": "Offer", "price": "35", "priceCurrency": "EUR", "description": "Monthly subscription. Final price EUR 35; VAT included for customers in Romania. Cancel anytime."}, "featureList": ["Playlist metadata export to Serato and rekordbox", "Analyze MP3, AIFF and WAV files from your local library", "Find entry and exit points with beat and downbeat detection", "Explore up to 25 Build and 25 Release matches per track", "Compare compatible tracks within \u00b18 BPM", "Reopen saved analysis without rescanning your music", "Export CSV, JSON and rekordbox XML cues"]}</script>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
@@ -134,14 +134,24 @@
       <section class="download" id="download" aria-labelledby="download-title">
         <p class="section-label">Download</p>
         <h2 id="download-title">Get SHIFT Beat.</h2>
-        <p class="download-note">€25 per month · Cancel anytime · License delivered by email.</p>
+        <p class="download-note">€35 per month · Final price · Cancel anytime.</p>
 
         <form class="purchase-form" id="purchase-form" novalidate>
-          <label for="purchase-email">Email address</label>
-          <div class="purchase-row">
-            <input id="purchase-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required />
-            <button id="purchase-button" type="submit">Subscribe · €25/month <span aria-hidden="true">→</span></button>
-          </div>
+          <div class="billing-heading"><span class="billing-heading-icon" aria-hidden="true">↗</span><div><h3>Your next set starts here.</h3><p>Enter your details for checkout and your invoice.</p></div></div>
+          <fieldset class="billing-fields"><legend>Billing details</legend>
+            <div class="billing-grid">
+              <div class="billing-field"><label for="billing-first-name">First name</label><input id="billing-first-name" name="first_name" autocomplete="given-name" maxlength="100" placeholder="First name" required /></div>
+              <div class="billing-field"><label for="billing-last-name">Last name</label><input id="billing-last-name" name="last_name" autocomplete="family-name" maxlength="100" placeholder="Last name" required /></div>
+              <div class="billing-field billing-full"><label for="purchase-email">Email address</label><input id="purchase-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you@example.com" required /><small>Your license will be sent to this email.</small></div>
+              <div class="billing-field billing-full"><label for="billing-address">Billing address</label><input id="billing-address" name="address" autocomplete="street-address" maxlength="300" placeholder="Street, number, apartment" required /></div>
+              <div class="billing-field"><label for="billing-country">Country</label><select id="billing-country" name="country" autocomplete="country" required disabled><option value="">Loading countries…</option></select></div>
+              <div class="billing-field"><label for="billing-city">City</label><select id="billing-ro-city" name="city_id" autocomplete="address-level2" hidden disabled><option value="">Select your city</option></select><input id="billing-city" name="city" autocomplete="address-level2" maxlength="100" placeholder="Select a country first" disabled /></div>
+            </div>
+          </fieldset>
+          <div class="billing-catalog-feedback"><p id="billing-catalog-status" role="status" aria-live="polite"></p><button id="billing-retry" type="button" hidden>Try again</button></div>
+          <div class="billing-summary"><div><span>Monthly subscription</span><strong>€35<span>/month</span></strong></div><p id="billing-tax-note" aria-live="polite">Final price. VAT included for customers in Romania.</p></div>
+          <button class="billing-submit" id="purchase-button" type="submit" disabled>Continue to secure checkout <span aria-hidden="true">→</span></button>
+          <p class="billing-checkout-note">Cancel anytime · License delivered by email</p>
           <p class="purchase-status" id="purchase-status" role="status" aria-live="polite"></p>
         </form>
 
