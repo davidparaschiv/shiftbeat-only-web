@@ -65,9 +65,6 @@ async function updateCountry() {
   document.querySelector('label[for="billing-city"], label[for="billing-ro-city"]').htmlFor = isRO ? 'billing-ro-city' : 'billing-city';
   catalogStatus.textContent = '';
   retry.hidden = true;
-  document.querySelector('#billing-tax-note').textContent = isRO
-    ? '€28.93 + €6.07 VAT (21%) = €35.00 total.'
-    : country.value ? '€35.00 total. No VAT charged.' : 'Final price. VAT included for customers in Romania.';
   updateSubmit();
   if (!isRO) return;
   if (citiesReady) { roCity.disabled = false; updateSubmit(); return; }
