@@ -8,7 +8,7 @@ Run `python3 -m http.server 8080` and open http://localhost:8080.
 
 ## Payments
 
-Pricing is EUR 25/month. `app.js` retains the original Supabase backend, publishable key, `create-checkout` endpoint, payment-return handling, and extends the request with billing details. The website uses the same backend and endpoints as requested. The actual checkout price is selected server-side by `STRIPE_PRICE_ID`; updating website copy does not update Stripe. The backend must use an inclusive EUR 25/month recurring Stripe Price and an inclusive Romanian VAT rate of 21%.
+Pricing is EUR 25/month. `app.js` retains the original Supabase backend, publishable key, `create-checkout` endpoint, payment-return handling, and extends the request with billing details. The website uses the same backend and endpoints as requested. The actual checkout price is selected server-side by `STRIPE_PRICE_ID`; updating website copy does not update Stripe. The backend uses a EUR 25/month recurring Stripe Price without Stripe tax rates. Romanian invoice VAT is split internally by the backend.
 
 ## Release download
 
@@ -24,6 +24,6 @@ Commit the site, configure the domain in GitHub Pages and DNS, then run `./deplo
 
 ## Billing form
 
-The checkout request now sends `email` and `billing` (`first_name`, `last_name`, `address`, ISO `country`, Romanian `city_id` or external free-text `city`). The public backend catalogues are `get-countries` and `get-cities`. Deploy the matching backend migrations/functions and configure the EUR 25 inclusive price before publishing this form. The frontend does not set the billed amount or tax rate.
+The checkout request now sends `email` and `billing` (`first_name`, `last_name`, `address`, ISO `country`, Romanian `city_id` or external free-text `city`). The public backend catalogues are `get-countries` and `get-cities`. Deploy the matching backend migrations/functions and configure the EUR 25 monthly price before publishing this form. The frontend does not set the billed amount or tax rate.
 
 The billing form follows the original 680px purchase panel and green CTA, with a single-column layout on mobile. It shows the EUR 25 monthly price without country-specific tax calculations. Local visual QA used display fixtures at desktop, 390px and 320px; it did not contact Supabase or verify catalog loading/live checkout.
