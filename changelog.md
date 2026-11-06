@@ -3,6 +3,7 @@
 - Audited GitHub Pages domain/HTTPS: HTTP and www variants redirect to https://shift-beat.com; Pages serves gh-pages at the root. Preserved the existing permissive robots.txt and per-page canonicals; formatted the two-page standard XML sitemap without invented dates or optional settings. Terms home links now use the canonical root URL. No design or visible copy changes.
 - Added an indexing validator for robots rules, sitemap/page/canonical consistency and optional live GET/HEAD checks, MIME types, release contents and path-preserving redirects. Deployment validates both source and packaged indexing files and includes them at the published root.
 - Documented Google guidance, verification commands and pending Search Console submission: browser access timed out, so authorized property access could not be confirmed. Native Scripts/build.py and Package.swift packaging reviewed: no app/DMG updates required.
+- Verification: source and deployment-package indexing checks, shell syntax and whitespace checks passed. After Pages publication, live GET/HEAD passed for both pages, robots.txt (200 text/plain) and sitemap.xml (200 application/xml), matching release bytes; HTTP/www redirects preserve both home and Terms paths. The first live check saw the prior sitemap while the Pages build was still running; the final check passed after publication. No Search Console submission was performed.
 
 ## 2026-11-04
 
