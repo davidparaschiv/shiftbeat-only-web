@@ -20,6 +20,8 @@ if [[ -n "$(git -C "$REPO_ROOT" status --porcelain --untracked-files=no)" ]]; th
   exit 1
 fi
 
+python3 "$SCRIPT_DIR/scripts/check_indexing.py" --root "$SCRIPT_DIR"
+
 echo "Creating temporary deployment branch: $TEMP_BRANCH"
 git -C "$REPO_ROOT" worktree add --detach "$TEMP_DIR" HEAD >/dev/null
 git -C "$TEMP_DIR" switch --orphan "$TEMP_BRANCH" >/dev/null
@@ -28,12 +30,15 @@ git -C "$TEMP_DIR" rm -rf . >/dev/null 2>&1 || true
 rsync -a \
   --exclude='.git/' \
   --exclude='deploy.sh' \
+  --exclude='scripts/' \
   --exclude='soundblast-backend/' \
   --exclude='*.dmg' \
   --exclude='.preview/' \
   --exclude='.DS_Store' \
   "$SCRIPT_DIR/" "$TEMP_DIR/"
 touch "$TEMP_DIR/.nojekyll"
+
+python3 "$SCRIPT_DIR/scripts/check_indexing.py" --root "$TEMP_DIR"
 
 git -C "$TEMP_DIR" add --all
 git -C "$TEMP_DIR" commit -m "Deploy SHIFT Beat website" >/dev/null

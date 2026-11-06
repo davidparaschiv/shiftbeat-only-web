@@ -18,9 +18,17 @@ The download button uses `https://github.com/davidparaschiv/shiftbeat-only-web/r
 
 Server-rendered static HTML, page titles/descriptions, canonical URLs, Open Graph/Twitter sharing, SoftwareApplication structured data, robots.txt, sitemap.xml and llms.txt all describe SHIFT Beat. No existing crawler helper was found in the copied project. The canonical domain is shift-beat.com (CNAME).
 
+The final public origin is **https://shift-beat.com**. HTTP and www variants redirect there through GitHub Pages, with HTTPS enforced. Home is canonical at `/`; Terms is canonical at `/terms.html`. Home links use `/` rather than the duplicate `/index.html` URL. `robots.txt` allows all public pages and rendering resources and declares the absolute sitemap URL. The XML sitemap uses the standard namespace and lists only those two existing indexable pages, with no anchors, external URLs, `lastmod`, `priority` or `changefreq`.
+
+Run `python3 scripts/check_indexing.py` before publication. `deploy.sh` runs this check both on the source and the packaged site, and includes `robots.txt`, `sitemap.xml` and `CNAME` at the published root. Python 3 is required for these checks. After the GitHub Pages build completes, run `python3 scripts/check_indexing.py --live`: this checks GET and HEAD, exact release contents, HTTP 200, MIME types (`text/plain` for robots and `application/xml` for the sitemap), no blocking response headers, and HTTP/www redirects preserving page paths. Hosting response headers are controlled by GitHub Pages; no unsupported `_headers` or server configuration file is added.
+
+Submit **https://shift-beat.com/sitemap.xml** in Google Search Console → the `shift-beat.com` property → Sitemaps. Submission remains pending: browser access timed out and authorized property access could not be verified. No Search Console submission or Google indexing result is claimed. These changes help discovery and indexing but do not guarantee indexing or ranking.
+
+Official references: [Google robots.txt](https://developers.google.com/crawling/docs/robots-txt/create-robots-txt), [sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), and [canonical URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls).
+
 ## Deployment
 
-Commit the site, configure the domain in GitHub Pages and DNS, then run `./deploy.sh`. Pages must serve `gh-pages` at its root. This task only edits local files; it does not deploy or change DNS.
+Commit the site, configure the domain in GitHub Pages and DNS, then run `./deploy.sh`. Pages must serve `gh-pages` at its root. The script publishes that branch; after the Pages build finishes, verify the release with `python3 scripts/check_indexing.py --live`.
 
 ## Billing form
 
