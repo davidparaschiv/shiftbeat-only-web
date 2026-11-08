@@ -1,0 +1,8 @@
+.DS_Store
+downloads/.DS_Store
+downloads/*.dmg
+.env
+.env.*
+soundblast-backend/
+
+.preview/
