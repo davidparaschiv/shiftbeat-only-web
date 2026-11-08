@@ -1,3 +1,8 @@
+## 2026-11-08
+
+- Expanded the supported audio input list to MP3, AIF/AIFF, FLAC, WAV, and AAC in the visible feature list, SoftwareApplication structured data and llms.txt. Export formats, layout and styles are unchanged.
+- Checks: local indexing validation, structured-data JSON parsing, input-list consistency and whitespace checks passed. Reviewed native Scripts/build.py and Package.swift packaging dependencies: no app/DMG changes required.
+
 ## 2026-11-06
 
 - Audited GitHub Pages domain/HTTPS: HTTP and www variants redirect to https://shift-beat.com; Pages serves gh-pages at the root. Preserved the existing permissive robots.txt and per-page canonicals; formatted the two-page standard XML sitemap without invented dates or optional settings. Terms home links now use the canonical root URL. No design or visible copy changes.
