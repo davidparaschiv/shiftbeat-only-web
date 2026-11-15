@@ -1,3 +1,13 @@
+## 2026-11-15
+
+- Styled the Bombu cross-promotion as a compact navy card with scoped blue/violet accents, app icon, decorative waveform and circular arrow; retained requested copy and product route. Mobile layout hides the waveform and wraps the description. Rendered and inspected the isolated section using cached headless Chromium at desktop/390px/320px, with no horizontal overflow and card heights 86–105px. Corrected the temporary preview harness charset/font-import removal before final renders; no preview-only changes shipped. Indexing and whitespace checks passed. No backend calls, push or deployment.
+
+- Changed the “Check also: Bombu.” card description to the owner’s wording: “Our DJ Pioneer DDJ FLX4 soft”. Layout, link, copied product and backend unchanged. Whitespace check passed; no deployment.
+
+- Added an isolated Bombu public-site snapshot at product-bombu/ and a responsive “Check also: Bombu” homepage section. Preserved Bombu branding, separate Terms/styles/scripts, public Supabase configuration, Stripe portal and installer URL. Original Bombu project public-file hashes verified unchanged.
+- Adapted copied canonical/social/structured URLs and Terms home links to the nested route; extended root sitemap/crawler information and indexing validation to four pages. Publishing now archives committed public paths, including the copied product, rather than recursively copying the working directory.
+- Local references, structured JSON, JavaScript/shell syntax, indexing, whitespace and static GET/HEAD checks passed; /product-bombu redirects to /product-bombu/ in the local static server. First HTTP smoke check closed a large response unread and produced a local BrokenPipeError; repeated check consumes responses. Owner confirmed they will handle Bombu backend origin permission separately; frontend checkout remains connected to Bombu, with existing bombu.net Stripe return URLs until the owner changes the backend. No backend changes, Supabase requests, checkout transactions, push or deployment performed.
+
 ## 2026-11-08
 
 - Expanded the supported audio input list to MP3, AIF/AIFF, FLAC, WAV, and AAC in the visible feature list, SoftwareApplication structured data and llms.txt. Export formats, layout and styles are unchanged.

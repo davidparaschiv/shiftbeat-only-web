@@ -15,8 +15,8 @@ cleanup() {
 }
 trap cleanup EXIT INT TERM
 
-if [[ -n "$(git -C "$REPO_ROOT" status --porcelain --untracked-files=no)" ]]; then
-  echo "Deployment stopped: commit or stash tracked changes first."
+if [[ -n "$(git -C "$REPO_ROOT" status --porcelain)" ]]; then
+  echo "Deployment stopped: commit or stash website changes first."
   exit 1
 fi
 
@@ -27,15 +27,10 @@ git -C "$REPO_ROOT" worktree add --detach "$TEMP_DIR" HEAD >/dev/null
 git -C "$TEMP_DIR" switch --orphan "$TEMP_BRANCH" >/dev/null
 git -C "$TEMP_DIR" rm -rf . >/dev/null 2>&1 || true
 
-rsync -a \
-  --exclude='.git/' \
-  --exclude='deploy.sh' \
-  --exclude='scripts/' \
-  --exclude='soundblast-backend/' \
-  --exclude='*.dmg' \
-  --exclude='.preview/' \
-  --exclude='.DS_Store' \
-  "$SCRIPT_DIR/" "$TEMP_DIR/"
+# Publish only committed public files, including the independent Bombu page.
+# No backend directories, source repositories, local credentials or caches.
+PUBLIC_FILES=(index.html terms.html styles.css terms.css app.js favicon.png robots.txt sitemap.xml llms.txt CNAME)
+git -C "$REPO_ROOT" archive HEAD -- "${PUBLIC_FILES[@]}" assets product-bombu | tar -x -C "$TEMP_DIR"
 touch "$TEMP_DIR/.nojekyll"
 
 python3 "$SCRIPT_DIR/scripts/check_indexing.py" --root "$TEMP_DIR"

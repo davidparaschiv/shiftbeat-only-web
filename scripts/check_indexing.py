@@ -58,17 +58,24 @@ def check_files(root):
                 'Sitemap must contain only url/loc; no invented dates or optional settings')
         urls.append(entry[0].text)
     expected = {}
-    for source in sorted(root.glob('*.html')):
+    for source in sorted(root.rglob('*.html')):
         page = Page(source.read_text(encoding='utf-8'))
         require(len(page.canonicals) == 1, f'{source.name}: expected one canonical')
-        url = ORIGIN + ('/' if source.name == 'index.html' else '/' + source.name)
+        relative = source.relative_to(root).as_posix()
+        path = '/' + relative
+        if source.name == 'index.html':
+            path = path[:-len('index.html')]
+        url = ORIGIN + path
         require(page.canonicals == [url], f'{source.name}: canonical mismatch')
         if not page.noindex:
-            expected[url] = source.name
+            expected[url] = relative
     require(set(urls) == set(expected) and len(urls) == len(expected),
             'Sitemap must match all existing indexable pages, without duplicates')
     for path in ['/', '/terms.html', '/styles.css', '/terms.css', '/app.js',
-                 '/favicon.png', '/assets/shiftbeat-icon.png', '/assets/social-card.png']:
+                 '/favicon.png', '/assets/shiftbeat-icon.png', '/assets/social-card.png',
+                 '/product-bombu/', '/product-bombu/terms.html',
+                 '/product-bombu/styles.css', '/product-bombu/app.js',
+                 '/product-bombu/site-config.js', '/product-bombu/assets/bombu-workspace.png']:
         require(crawler.can_fetch('Googlebot', ORIGIN + path), f'Crawler blocked: {path}')
     print(f'PASS local: robots rules, XML namespace, {len(urls)} canonical pages, public resources.')
     return expected
@@ -95,7 +102,7 @@ def check_live(root, pages):
                 require(body == (root / filename).read_bytes(), f'{path}: live differs from release')
             print(f'PASS live: {method} {path} 200 {mime}')
     for origin in ('http://shift-beat.com', 'http://www.shift-beat.com', 'https://www.shift-beat.com'):
-        for path in ('/', '/terms.html'):
+        for path in [urllib.parse.urlsplit(url).path for url in pages]:
             for method in ('GET', 'HEAD'):
                 status, final, _, _ = fetch(origin + path, method)
                 require(status == 200 and final == ORIGIN + path,

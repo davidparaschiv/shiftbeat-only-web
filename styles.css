@@ -184,3 +184,18 @@ a:focus-visible,button:focus-visible { outline:2px solid var(--cyan); outline-of
  .billing-field input,.billing-field select { font-size:16px; }
  .billing-submit { margin-top:22px; }
 }
+
+/* Bombu's compact blue/violet card is scoped to this product link. */
+.also-product { padding:40px 0 52px; border-top:1px solid var(--line); }
+.also-product-card { position:relative; isolation:isolate; overflow:hidden; display:flex; align-items:center; gap:18px; width:100%; max-width:560px; margin-top:16px; padding:20px; border:1px solid rgba(130,153,255,.28); border-radius:16px; background:radial-gradient(ellipse at 100% 0,rgba(89,173,255,.14),transparent 62%),linear-gradient(115deg,#11162f,#0b1123); box-shadow:inset 0 1px 0 rgba(199,209,255,.06); transition:border-color .2s,box-shadow .2s; }
+.also-product-card::before { position:absolute; left:0; top:20px; bottom:20px; width:2px; border-radius:2px; content:""; background:linear-gradient(#59adff,#a68cff); }
+.also-product-card:hover { border-color:rgba(166,140,255,.65); box-shadow:0 8px 28px rgba(42,69,153,.15),inset 0 1px 0 rgba(199,209,255,.1); }
+.also-product-card:focus-visible { outline:2px solid #a68cff; outline-offset:4px; }
+.also-product-card img { flex:0 0 auto; width:56px; height:56px; border-radius:13px; box-shadow:0 4px 18px rgba(72,62,235,.2); }
+.also-product-copy { min-width:0; }
+.also-product-card h2 { margin:0 0 6px; color:#edf1ff; font-size:26px; line-height:1.1; letter-spacing:-.04em; }
+.also-product-description { display:block; color:#aab5d6; font-size:12px; line-height:1.6; text-wrap:pretty; }
+.also-product-wave { flex:0 0 auto; width:64px; height:24px; margin-left:auto; color:#59adff; opacity:.65; }
+.also-product-arrow { flex:0 0 auto; display:grid; place-items:center; width:30px; height:30px; margin-left:auto; border:1px solid rgba(166,140,255,.24); border-radius:50%; background:rgba(166,140,255,.07); color:#bda9ff; font-size:18px; }
+.also-product-wave + .also-product-arrow { margin-left:0; }
+@media(max-width:560px) { .also-product-card { padding:16px; gap:14px; border-radius:13px; } .also-product-card img { width:48px; height:48px; border-radius:11px; } .also-product-card h2 { font-size:24px; } .also-product-wave { display:none; } .also-product-wave + .also-product-arrow { margin-left:auto; } }
