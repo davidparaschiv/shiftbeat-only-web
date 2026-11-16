@@ -1,5 +1,7 @@
 ## 2026-11-16
 
+- Added the same already-active handling to the independent Bombu product page at `/product-bombu/`, showing the exact agreed message in its existing green purchase-status area beside Manage subscription. No root-page code or styles changed by this update.
+
 - Show the agreed existing-subscription message for `?payment=already-active`, using the same purchase status area and success styling as payment confirmation. Existing Manage subscription link is retained.
 - Validation: JavaScript syntax, payment-result display checks and indexing validation passed.
 

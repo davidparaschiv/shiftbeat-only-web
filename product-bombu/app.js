@@ -95,6 +95,7 @@ retry.addEventListener('click', () => countriesReady ? updateCountry() : loadCou
 
 const paymentResult = new URLSearchParams(window.location.search).get('payment');
 if (paymentResult === 'success') setPurchaseStatus('Payment received. Your license is being sent by email.', 'success');
+else if (paymentResult === 'already-active') setPurchaseStatus('You already have a subscription active. Check manage subscription.', 'success');
 else if (paymentResult === 'cancelled') setPurchaseStatus('Payment cancelled. You were not charged.', 'neutral');
 
 purchaseForm.addEventListener('submit', async (event) => {
