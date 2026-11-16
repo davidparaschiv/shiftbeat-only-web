@@ -1,3 +1,8 @@
+## 2026-11-16
+
+- Show the agreed existing-subscription message for `?payment=already-active`, using the same purchase status area and success styling as payment confirmation. Existing Manage subscription link is retained.
+- Validation: JavaScript syntax, payment-result display checks and indexing validation passed.
+
 ## 2026-11-15
 
 - Styled the Bombu cross-promotion as a compact navy card with scoped blue/violet accents, app icon, decorative waveform and circular arrow; retained requested copy and product route. Mobile layout hides the waveform and wraps the description. Rendered and inspected the isolated section using cached headless Chromium at desktop/390px/320px, with no horizontal overflow and card heights 86–105px. Corrected the temporary preview harness charset/font-import removal before final renders; no preview-only changes shipped. Indexing and whitespace checks passed. No backend calls, push or deployment.
