@@ -1,3 +1,8 @@
+## 2026-11-17
+
+- Updated the copied Bombu page download URL in browser configuration and HTML fallback to the Bombu.dmg asset in the latest shiftbeat-only-web GitHub release.
+- Validation: JavaScript syntax, both download references, indexing checks and whitespace checks passed.
+
 ## 2026-11-16
 
 - Added the same already-active handling to the independent Bombu product page at `/product-bombu/`, showing the exact agreed message in its existing green purchase-status area beside Manage subscription. No root-page code or styles changed by this update.
