@@ -32,13 +32,13 @@ Commit the site, configure the domain in GitHub Pages and DNS, then run `./deplo
 
 ## Billing form
 
-The checkout request now sends `email` and `billing` (`first_name`, `last_name`, `address`, ISO `country`, Romanian `city_id` or external free-text `city`). The public backend catalogues are `get-countries` and `get-cities`. Deploy the matching backend migrations/functions and configure the EUR 25 monthly price before publishing this form. The frontend does not set the billed amount or tax rate.
+The checkout request now sends `email` and `billing` (`first_name`, `last_name`, `address`, ISO `country`, Romanian `city_id` or external free-text `city`). The public backend catalogues are `get-countries` and `get-cities`. Deploy the matching backend migrations/functions and configure the EUR 25 monthly and EUR 200 yearly prices before publishing this form. The frontend does not set the billed amount or tax rate.
 
-The billing form follows the original 680px purchase panel and green CTA, with a single-column layout on mobile. It shows the EUR 25 monthly price without country-specific tax calculations. Local visual QA used display fixtures at desktop, 390px and 320px; it did not contact Supabase or verify catalog loading/live checkout.
+The billing form follows the original 680px purchase panel and green CTA, with a single-column layout on mobile. It shows the EUR 25 monthly or EUR 200 yearly price without country-specific tax calculations. Local visual QA used display fixtures at desktop, 390px and 320px; it did not contact Supabase or verify catalog loading/live checkout.
 
 ## Bombu product page
 
-Bombu pricing is €25/month or €200/year. Its purchase toggle defaults to monthly and sends only `plan: "monthly"` or `"yearly"`; amounts and Stripe Price IDs are selected by the backend. Yearly shows a small “33% off” badge beside the price (rounded savings compared with 12 monthly payments). The badge uses a 50%-opacity gray background with light gray text. Bombu's Terms and structured offers include both plans. Deploy the matching Bombu yearly-billing migration/functions and configure `STRIPE_YEARLY_PRICE_ID` / `MOCK_STRIPE_YEARLY_PRICE_ID` before publishing. These changes apply only to `/product-bombu/`; SHIFT Beat's root pricing is unchanged.
+Bombu pricing is €25/month or €200/year. Its purchase toggle defaults to monthly and sends only `plan: "monthly"` or `"yearly"`; amounts and Stripe Price IDs are selected by the backend. Yearly shows a small “33% off” badge beside the price (rounded savings compared with 12 monthly payments). The badge uses a 50%-opacity gray background with light gray text. Bombu's Terms and structured offers include both plans. Deploy the matching Bombu yearly-billing migration/functions and configure `STRIPE_YEARLY_PRICE_ID` / `MOCK_STRIPE_YEARLY_PRICE_ID` before publishing. These changes apply only to `/product-bombu/`; SHIFT Beat's root page now offers the same two price plans with its own backend configuration.
 
 `product-bombu/` is an independent snapshot of the public files from `/Users/davidparaschiv/Local Projects/bombu-only-web`. The original checkout and repository are unchanged; future Bombu website edits do not automatically update this copy. SHIFT Beat links to it under “Check also: Bombu”. GitHub Pages serves `/product-bombu` with a trailing-slash redirect to `/product-bombu/`, with Bombu Terms at `/product-bombu/terms.html`. Relative assets, Terms home navigation and copied metadata use the nested route.
 
@@ -47,3 +47,7 @@ Bombu retains its own stylesheet, scripts, public Supabase project configuration
 **Backend setup handled by owner:** The owner will separately allow https://shift-beat.com in Bombu’s backend. Until deployed, the copied billing/checkout flow may be blocked by origin checks. The copied page continues calling Bombu’s existing Supabase checkout endpoint; no checkout redirect to the standalone site was substituted. Bombu’s current backend Stripe success/cancel URLs still point to bombu.net; update them separately if payment returns should land on /product-bombu/. No backend file was changed.
 
 Publishing exports committed public files only, including `product-bombu/`; source and packaged indexing checks cover all four pages. No automatic publication or backend deployment is performed by preparing these files.
+
+## SHIFT Beat yearly billing
+
+The root purchase toggle defaults to monthly, sends `plan: "monthly"` or `"yearly"`, and is locked during checkout. Prices are €25/month or €200/year. The small yearly 33% off badge matches the Bombu reference, using gray at 50% background opacity. Deploy the matching SHIFT Beat yearly billing/payment-log migrations and functions, with STRIPE_YEARLY_PRICE_ID and MOCK_STRIPE_YEARLY_PRICE_ID, before publishing. Backend selects prices and taxes; no Stripe secret is exposed in this website.

@@ -1,5 +1,10 @@
 ## 2026-11-19
 
+- Added SHIFT Beat monthly/yearly selection using the Bombu toggle pattern in SHIFT Beat colors: €25/month by default, €200/year with a small gray 33% off badge. Checkout sends only the plan and locks the switch while opening. Updated Terms and crawler pricing information. Bombu files unchanged.
+- Validation: JavaScript syntax, indexing and whitespace checks passed; local browser checks at 1440px, 390px and 320px confirmed default/changed pricing, badge visibility, no horizontal overflow, selected plan payload and disabled switch during checkout. Browser requests used local display fixtures and did not contact Supabase.
+
+## 2026-11-19
+
 - Added the Bombu product page's simple Pay monthly / Pay yearly switch, defaulting to EUR 25/month with EUR 200/year as the alternative. The price and subscribe label follow the selection, and checkout sends only the plan name to the backend. Yearly displays a small “33% off” badge immediately to the right of its price, with a 50%-opacity gray background and light gray text. Updated Bombu Terms and structured offers; app screenshot and root SHIFT Beat product are unchanged.
 - Validation: JavaScript syntax, indexing for all four pages, structured JSON and whitespace passed. An isolated offline pricing fixture passed 27 checks at 320/390/1440px, including toggle state, selected checkout plan, badge position/colors and no horizontal overflow; inspected mobile/desktop renders. No country/city loading test or hosted payment was performed. The owner explicitly authorized website publication before the backend because the app is not live yet; matching backend setup is documented in the backend YEARLY-BILLING.md. Native app packaging is unaffected.
 
