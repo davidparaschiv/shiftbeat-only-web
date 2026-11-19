@@ -51,3 +51,5 @@ Publishing exports committed public files only, including `product-bombu/`; sour
 ## SHIFT Beat yearly billing
 
 The root purchase toggle defaults to monthly, sends `plan: "monthly"` or `"yearly"`, and is locked during checkout. Prices are €25/month or €200/year. The small yearly 33% off badge matches the Bombu reference, using gray at 50% background opacity. Deploy the matching SHIFT Beat yearly billing/payment-log migrations and functions, with STRIPE_YEARLY_PRICE_ID and MOCK_STRIPE_YEARLY_PRICE_ID, before publishing. Backend selects prices and taxes; no Stripe secret is exposed in this website.
+
+For deployment compatibility, yearly checkout requires `plan: "yearly"` in the response before navigating to Stripe. An older monthly-only backend cannot silently charge the monthly price for a yearly selection.

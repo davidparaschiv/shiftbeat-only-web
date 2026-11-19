@@ -129,6 +129,7 @@ purchaseForm.addEventListener('submit', async (event) => {
     });
     const result = await response.json().catch(() => ({}));
     if (!response.ok || !result.url) throw new Error(result.error || 'Checkout is temporarily unavailable.');
+    if (billingYearly.checked && result.plan !== 'yearly') throw new Error('Yearly checkout is temporarily unavailable. Please try again later.');
     const target = new URL(result.url);
     if (target.protocol !== 'https:') throw new Error('Invalid checkout address.');
     window.location.assign(target.href);
