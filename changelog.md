@@ -1,5 +1,7 @@
 ## 2026-11-19
 
+- Removed the requested compatibility/internet note beneath Bombu pricing on `/product-bombu/`. Validation: indexing and whitespace checks passed.
+
 - Added SHIFT Beat monthly/yearly selection using the Bombu toggle pattern in SHIFT Beat colors: €25/month by default, €200/year with a small gray 33% off badge. Checkout sends only the plan and locks the switch while opening. Updated Terms and crawler pricing information. Yearly checkout also requires the backend to confirm the yearly plan, preventing an older monthly-only deployment from opening a monthly checkout for a yearly selection. Bombu files unchanged.
 - Validation: JavaScript syntax, indexing and whitespace checks passed; local browser checks at 1440px, 390px and 320px confirmed default/changed pricing, badge visibility, no horizontal overflow, selected plan payload and disabled switch during checkout. Browser requests used local display fixtures and did not contact Supabase.
 
