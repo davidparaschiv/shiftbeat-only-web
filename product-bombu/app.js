@@ -8,6 +8,14 @@ document.querySelector('[data-customer-portal]').href = siteConfig.customerPorta
 const purchaseForm = document.querySelector('#purchase-form');
 const purchaseEmail = document.querySelector('#purchase-email');
 const purchaseButton = document.querySelector('#purchase-button');
+const billingYearly = document.querySelector('#billing-yearly');
+function updatePlan() {
+  document.querySelector('#subscription-price').textContent = billingYearly.checked ? '€200 per year' : '€25 per month';
+  document.querySelector('#subscribe-label').textContent = billingYearly.checked ? 'Subscribe · €200/year' : 'Subscribe · €25/month';
+  document.querySelector('#yearly-discount').hidden = !billingYearly.checked;
+}
+billingYearly.addEventListener('change', updatePlan);
+updatePlan();
 const purchaseStatus = document.querySelector('#purchase-status');
 const country = document.querySelector('#billing-country');
 const roCity = document.querySelector('#billing-ro-city');
@@ -24,6 +32,7 @@ function setPurchaseStatus(message, type = '') {
   purchaseStatus.dataset.type = type;
 }
 function updateSubmit() {
+  billingYearly.disabled = checkoutBusy;
   purchaseButton.disabled = checkoutBusy || !countriesReady || !country.value || (country.value === 'RO' && !citiesReady);
 }
 function placeholder(select, label) {
@@ -119,7 +128,7 @@ purchaseForm.addEventListener('submit', async (event) => {
   try {
     const response = await fetch(`${supabaseUrl}/functions/v1/create-checkout`, {
       method: 'POST', headers: { apikey: supabasePublishableKey, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: purchaseEmail.value.trim(), billing }),
+      body: JSON.stringify({ email: purchaseEmail.value.trim(), billing, plan: billingYearly.checked ? 'yearly' : 'monthly' }),
     });
     const result = await response.json().catch(() => ({}));
     if (!response.ok || !result.url) throw new Error(result.error || 'Checkout is temporarily unavailable.');
