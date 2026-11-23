@@ -1,3 +1,8 @@
+## 2026-11-23
+
+- Centered the SHIFT Beat Download section from its heading through the download button, including the plan switch, pricing, billing panel and subscription-management row. Kept form and download-button contents aligned as before; no Bombu or backend changes.
+- Validation: Chrome/WebKit at 320/390/1440px confirmed centered direct elements, preserved internal alignment and no horizontal overflow. Indexing and whitespace checks passed.
+
 ## 2026-11-19
 
 - Removed the requested compatibility/internet note beneath Bombu pricing on `/product-bombu/`. Validation: indexing and whitespace checks passed.
