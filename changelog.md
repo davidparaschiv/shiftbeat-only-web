@@ -1,3 +1,8 @@
+## 2026-11-26
+
+- Simplified only the root SHIFT Beat subscription form to email; monthly/yearly switch, prices, centered panel, subscription messages and management/download links are preserved. Stripe collects full name, address, country and city. Removed form catalog loading and billing fields; checkout sends email/plan only, while controls stay locked during the request. Updated Terms and versioned app.js.
+- Local Chrome/WebKit checks passed at 320/390/1440px for email validation, yearly payload, disabled controls, error recovery and no overflow. Indexing, JavaScript syntax and whitespace checks passed. No country/city-loading tests added, no provider requests or hosted integration suite run. The owner authorized publication after successful SHIFT Beat backend sync; hosted integration tests remain unrun. Separate pending product-bombu edits are preserved locally and excluded from this publication.
+
 ## 2026-11-23
 
 - Centered the SHIFT Beat Download section from its heading through the download button, including the plan switch, pricing, billing panel and subscription-management row. Kept form and download-button contents aligned as before; no Bombu or backend changes.
