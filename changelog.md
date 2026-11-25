@@ -1,5 +1,10 @@
 ## 2026-11-26
 
+- Deployment follow-up: the owner explicitly authorized pushing the Bombu frontend, then backend, running the existing backend sync script, and finally publishing the website with ./deploy.sh. Integration tests remain excluded from this follow-up.
+
+- Simplified the separate Bombu page `/product-bombu/` to email plus the existing monthly/yearly switch. Removed name/address/country/city fields and catalog requests; Stripe Checkout collects billing details. Added a short Stripe collection note and versioned the Bombu app script to avoid stale form code. Existing prices, discount, screenshot, subscription messages and management/download links are preserved. Root SHIFT Beat changes in other entries are separate work.
+- Bombu verification: JavaScript syntax and source/whitespace review only; no integration suite or provider requests. Matching Bombu backend migration/functions must be deployed before publication. No commit, push or deployment performed for this change.
+
 - Simplified only the root SHIFT Beat subscription form to email; monthly/yearly switch, prices, centered panel, subscription messages and management/download links are preserved. Stripe collects full name, address, country and city. Removed form catalog loading and billing fields; checkout sends email/plan only, while controls stay locked during the request. Updated Terms and versioned app.js.
 - Local Chrome/WebKit checks passed at 320/390/1440px for email validation, yearly payload, disabled controls, error recovery and no overflow. Indexing, JavaScript syntax and whitespace checks passed. No country/city-loading tests added, no provider requests or hosted integration suite run. The owner authorized publication after successful SHIFT Beat backend sync; hosted integration tests remain unrun. Separate pending product-bombu edits are preserved locally and excluded from this publication.
 
