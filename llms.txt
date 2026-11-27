@@ -11,4 +11,4 @@ Subscription: EUR 25 per month or EUR 200 per year (final prices; 21% VAT includ
 
 ## Check also: Bombu
 
-[Bombu](https://shift-beat.com/product-bombu/) is a separate native DJ performance app for macOS 26+. Its product page has its own styling, [Terms](https://shift-beat.com/product-bombu/terms.html), download and subscription flow. See [Bombu product information](https://shift-beat.com/product-bombu/llms.txt).
+[Bombu](https://shift-beat.com/product-bombu/) is a separate native DJ performance app for macOS 15+. Its product page has its own styling, [Terms](https://shift-beat.com/product-bombu/terms.html), download and subscription flow. See [Bombu product information](https://shift-beat.com/product-bombu/llms.txt).

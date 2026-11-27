@@ -1,6 +1,6 @@
 # Bombu
 
-> Native two-deck DJ performance for macOS 26+, on Intel and Apple Silicon.
+> Native two-deck DJ performance for macOS 15+, on Intel and Apple Silicon.
 
 ## Official pages
 
@@ -15,7 +15,7 @@ Bombu is a native Mac DJ app with a blue/violet two-deck workspace, detailed wav
 
 ## Compatibility
 
-macOS 26+, on Intel and Apple Silicon Macs. Wired controller/audio workflow; Bluetooth audio is not supported. Keep at least 5 GB of free disk space available, as described in the Terms.
+macOS 15+, on Intel and Apple Silicon Macs. Wired controller/audio workflow; Bluetooth audio is not supported. Keep at least 5 GB of free disk space available, as described in the Terms.
 
 ## Audio input
 

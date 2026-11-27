@@ -1,3 +1,7 @@
+## 2026-11-27
+
+- Updated Bombu compatibility from macOS 26+ to macOS 15+ on the product page, Terms, search/social metadata, structured data and crawler information. Text-only change; screenshot and styling preserved. Validation: indexing and whitespace checks. No integration tests run.
+
 ## 2026-11-26
 
 - Deployment follow-up: the owner explicitly authorized pushing the Bombu frontend, then backend, running the existing backend sync script, and finally publishing the website with ./deploy.sh. Integration tests remain excluded from this follow-up.
