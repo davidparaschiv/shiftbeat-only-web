@@ -1,0 +1,46 @@
+# Bombu
+
+> Native two-deck DJ performance for macOS 15+, on Intel and Apple Silicon.
+
+## Official pages
+
+- [Home](https://shift-beat.com/product-bombu/): Product features, compatibility, subscription and download.
+- [Actual app screenshot](https://shift-beat.com/product-bombu/assets/bombu-workspace.png): Owner-provided capture of Bombu’s waveforms and performance pads.
+- [Terms](https://shift-beat.com/product-bombu/terms.html): Licensing, billing, compatibility, testing and liability.
+- [Sitemap](https://shift-beat.com/sitemap.xml): Canonical public pages.
+
+## What Bombu does
+
+Bombu is a native Mac DJ app with a blue/violet two-deck workspace, detailed waveforms and beat grids. It is designed around a wired Pioneer DDJ-FLX4 workflow. Tracks and audio processing stay local; audio is not uploaded.
+
+## Compatibility
+
+macOS 15+, on Intel and Apple Silicon Macs. Wired controller/audio workflow; Bluetooth audio is not supported. Keep at least 5 GB of free disk space available, as described in the Terms.
+
+## Audio input
+
+Local MP3, AIF/AIFF, FLAC, WAV/WAVE and AAC (.aac/.m4a) audio, subject to native codec support. Local folders can include subfolders.
+
+## Includes:
+
+- Automatic smart sampler / slicer.
+- Recorded vocal and instrumental samples based on your track.
+- Automatic stem generation.
+- RMX support.
+- Automatic loop syncing.
+- Automatic loudness correction.
+- Similar-BPM songs inside your folder.
+
+## Subscription and connectivity
+
+EUR 25 per month; cancel anytime. A license is delivered by email. Internet is required for license approval and new helper analysis. Local audio processing does not imply an internet-free licensing workflow.
+
+## Ownership and support
+
+Owned by ShiftBEAT. Website: https://shift-beat.com/product-bombu/. Support: support@shift-beat.com.
+
+## Download and portal status
+
+Official download: https://github.com/davidparaschiv/bombu-only-web/releases/latest/download/Bombu.dmg. The release asset name is Bombu.dmg; the link follows the latest stable release.
+
+The customer-portal URL still uses the previously configured Stripe link pending owner review.
